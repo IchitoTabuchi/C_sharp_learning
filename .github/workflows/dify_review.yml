@@ -17,6 +17,7 @@ jobs:
         env:
           API_URL: "https://api.dify.ai/v1/workflows/run"
           API_KEY: ${{ secrets.DIFY_AI_REVIEW_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           response=$(curl -s -X POST "$API_URL" \
             -H "Authorization: Bearer $API_KEY" \
@@ -24,6 +25,7 @@ jobs:
             -d '{
               "inputs": { 
                 "url": "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}" 
+                "github_token\": \"$GITHUB_TOKEN\"
               },
               "response_mode": "blocking",
               "user": "AI_Review_Label"
