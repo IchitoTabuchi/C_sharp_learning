@@ -2,13 +2,13 @@ name: AI Review α
 
 on:
   pull_request:
-    types: [review_requested]
+    types: [labeled]
 
 jobs:
   request_ai_review:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    if: ${{ github.event.requested_reviewer.login == 'xxxxxx' }}
+    if: ${{ github.event.label.name == 'AI_Review' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -22,9 +22,11 @@ jobs:
             -H "Authorization: Bearer $API_KEY" \
             -H "Content-Type: application/json" \
             -d '{
-              "inputs": { "url": "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}" },
+              "inputs": { 
+                "url": "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}" 
+              },
               "response_mode": "blocking",
-              "user": "xxxxxx"
+              "user": "AI_Review_Label"
             }')
 
           echo "Response: $response"
