@@ -1,0 +1,7 @@
+C:\Users\r00528311\source\repos\C_sharp_learning\Excercise201\bin\Debug\Excercise201.exe.config
+C:\Users\r00528311\source\repos\C_sharp_learning\Excercise201\bin\Debug\Excercise201.exe
+C:\Users\r00528311\source\repos\C_sharp_learning\Excercise201\bin\Debug\Excercise201.pdb
+C:\Users\r00528311\source\repos\C_sharp_learning\Excercise201\obj\Debug\Excercise201.csproj.AssemblyReference.cache
+C:\Users\r00528311\source\repos\C_sharp_learning\Excercise201\obj\Debug\Excercise201.csproj.CoreCompileInputs.cache
+C:\Users\r00528311\source\repos\C_sharp_learning\Excercise201\obj\Debug\Excercise201.exe
+C:\Users\r00528311\source\repos\C_sharp_learning\Excercise201\obj\Debug\Excercise201.pdb

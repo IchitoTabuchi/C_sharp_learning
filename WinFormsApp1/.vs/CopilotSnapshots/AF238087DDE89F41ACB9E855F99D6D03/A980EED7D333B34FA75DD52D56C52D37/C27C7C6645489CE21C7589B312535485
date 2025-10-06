@@ -1,0 +1,31 @@
+﻿namespace WinFormsApp1
+{
+	public partial class Form1 : Form
+	{
+		public Form1()
+		{
+			InitializeComponent();
+
+			StartPosition = FormStartPosition.CenterScreen;
+		}
+
+		// ラムダなし
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+			var values = new string[] { "A", "BB", "CCC", "DDDD", "EEEEE" };
+
+			var result = new List<string>();
+			foreach (var val in values)
+			{
+				if (val.Length >= 3)
+				{
+					result.Add(val);
+				}
+
+			}
+
+			MessageBox.Show(string.Join(",", result));
+		}
+
+	}
+}
